@@ -16,39 +16,47 @@
                 <a href="index.html"><img src="images/logo.jpg" alt="Logo HAID" class="logo-haid" onerror="this.src='https://i.ibb.co/rGZscHdm/IMG-2911.jpg';this.onerror=null"></a>
             </div>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
-                <li><a href="nos-actions.html">Nos actions</a></li>
-                <li><a href="projets.html">Projets</a></li>
-                <li><a href="nous-soutenir.html">Nous soutenir</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="qui-sommes-nous.html" data-i18n="nav.about">Qui sommes-nous</a></li>
+                <li><a href="nos-actions.html" data-i18n="nav.actions">Nos actions</a></li>
+                <li><a href="projets.html" data-i18n="nav.projects">Projets</a></li>
+                <li><a href="nous-soutenir.html" data-i18n="nav.support">Nous soutenir</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+<li class="lang-switcher">
+                    <button class="lang-btn active" data-lang="fr">FR</button>
+                    <span class="lang-separator">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </li>
             </ul>
             <div class="hamburger" id="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
         </nav>
     </header>
-    <section class="page-header">
+    <section class="page-header page-header-legal">
+        <div class="page-header-overlay"></div>
         <div class="container">
             <div class="page-header-content">
-                <span class="page-header-tag">Légal</span>
-                <h1>Politique <span class="accent">cookies</span></h1>
+                <span class="page-header-tag" data-i18n="leg.tag">Légal</span>
+                <h1 data-i18n-html="cok.h1">Politique <span class="accent">cookies</span></h1>
             </div>
         </div>
     </section>
     <section class="legal-content">
         <div class="container">
-            <h2>Cookies utilisés</h2>
-            <p>Ce site utilise uniquement : un stockage local de préférence de langue (<code>haid-lang</code>) et les cookies techniques des CDN (Google Fonts, Font Awesome). Aucun cookie publicitaire.</p>
-            <h2>Gestion</h2>
-            <p>Vous pouvez effacer le stockage local via les paramètres de votre navigateur. Le site reste utilisable sans cookies.</p>
-            <p><a href="contact.html" class="btn-primary"><span>Nous contacter</span></a></p>
+            <h2 data-i18n="cok.s1">Cookies utilisés</h2>
+            <p data-i18n-html="cok.p1">Ce site utilise uniquement : un stockage local de préférence de langue (<code>haid-lang</code>) et les cookies techniques des CDN (Google Fonts, Font Awesome). Aucun cookie publicitaire.</p>
+            <h2 data-i18n="cok.s2">Gestion</h2>
+            <p data-i18n="cok.p2">Vous pouvez effacer le stockage local via les paramètres de votre navigateur. Le site reste utilisable sans cookies.</p>
+            <p><a href="contact.html" class="btn-primary"><span data-i18n="abt.cta2">Nous contacter</span></a></p>
         </div>
     </section>
     <footer>
         <div class="footer-bottom"><div class="container"><div class="footer-bottom-content">
-            <p>&copy; <span id="currentYear"></span> HAID RDC - Tous droits réservés</p>
-            <div class="footer-legal"><a href="mentions-legales.html">Mentions légales</a><span class="separator">|</span><a href="politique-confidentialite.html">Politique de confidentialité</a><span class="separator">|</span><a href="cookies.html">Cookies</a></div>
+            <p data-i18n="footer.rights">&copy; <span id="currentYear"></span> HAID RDC - Tous droits réservés</p>
+            <div class="footer-legal"><a href="mentions-legales.html" data-i18n="footer.legal">Mentions légales</a><span class="separator">|</span><a href="politique-confidentialite.html" data-i18n="footer.privacy">Politique de confidentialité</a><span class="separator">|</span><a href="cookies.html" data-i18n="footer.cookies">Cookies</a></div>
         </div></div></div>
     </footer>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

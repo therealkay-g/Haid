@@ -52,8 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ===== LENIS SMOOTH SCROLL =====
-    const lenis = new Lenis({
+    // ===== LENIS SMOOTH SCROLL (optionnel : ignoré si le CDN est indisponible) =====
+    const lenis = (typeof Lenis !== 'undefined') ? new Lenis({
         duration: 1.2,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         direction: 'vertical',
@@ -63,13 +63,13 @@ document.addEventListener('DOMContentLoaded', function() {
         smoothTouch: false,
         touchMultiplier: 2,
         infinite: false,
-    });
+    }) : null;
 
     function raf(time) {
-        lenis.raf(time);
+        if (lenis) lenis.raf(time);
         requestAnimationFrame(raf);
     }
-    requestAnimationFrame(raf);
+    if (lenis) requestAnimationFrame(raf);
 
     // ===== AOS INIT =====
     if (typeof AOS !== 'undefined') {
@@ -240,10 +240,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 const updateCounter = () => {
                     current += step;
                     if (current < target) {
-                        counter.textContent = Math.floor(current).toLocaleString('fr-FR');
+                        counter.textContent = Math.floor(current).toLocaleString(document.documentElement.lang === 'en' ? 'en-US' : 'fr-FR');
                         requestAnimationFrame(updateCounter);
                     } else {
-                        counter.textContent = target.toLocaleString('fr-FR');
+                        counter.textContent = target.toLocaleString(document.documentElement.lang === 'en' ? 'en-US' : 'fr-FR');
                     }
                 };
                 
@@ -258,10 +258,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===== WHATSAPP BUTTONS =====
     const phoneNumber = '243823662018';
     
-    document.querySelectorAll('.btn-whatsapp').forEach(button => {
+    document.querySelectorAll('.btn-whatsapp:not(.btn-projet)').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
-            let message = "Bonjour HAID, je souhaite avoir plus d'informations.";
+            const en = document.documentElement.lang === 'en';
+            let message = en ? "Hello HAID, I would like more information." : "Bonjour HAID, je souhaite avoir plus d'informations.";
             if (this.dataset.message) message = this.dataset.message;
             const encodedMessage = encodeURIComponent(message);
             window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
@@ -271,7 +272,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.btn-whatsapp-social').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
-            const message = "Bonjour HAID, je vous contacte depuis votre site web.";
+            const enS = document.documentElement.lang === 'en';
+            const message = enS ? "Hello HAID, I am contacting you from your website." : "Bonjour HAID, je vous contacte depuis votre site web.";
             const encodedMessage = encodeURIComponent(message);
             window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
         });
@@ -289,12 +291,13 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.btn-donate, .montant-btn').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
+            const enD = document.documentElement.lang === 'en';
             let montant = this.textContent.trim();
-            let message = "Je souhaite faire un don";
+            let message = enD ? "I would like to make a donation" : "Je souhaite faire un don";
             if (montant.includes('$') || montant.includes('€')) {
-                message = `Je souhaite faire un don de ${montant}`;
+                message = enD ? `I would like to donate ${montant}` : `Je souhaite faire un don de ${montant}`;
             }
-            const encodedMessage = encodeURIComponent(`Bonjour HAID, ${message}. Pouvez-vous me guider ?`);
+            const encodedMessage = encodeURIComponent(enD ? `Hello HAID, ${message}. Can you guide me?` : `Bonjour HAID, ${message}. Pouvez-vous me guider ?`);
             window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
         });
     });
@@ -312,7 +315,16 @@ document.addEventListener('DOMContentLoaded', function() {
             const sujet = document.getElementById('sujet')?.value || '';
             const message = document.getElementById('message')?.value || '';
             
-            const sujets = {
+            const enC = document.documentElement.lang === 'en';
+            const sujets = enC ? {
+                'information': 'Information request',
+                'partenariat': 'Partnership proposal',
+                'don': 'Question about a donation',
+                'projet': 'Project proposal',
+                'benevolat': 'Become a volunteer',
+                'presse': 'Press / media request',
+                'autre': 'Other'
+            } : {
                 'information': 'Demande d\'information',
                 'partenariat': 'Proposition de partenariat',
                 'don': 'Question sur un don',
@@ -324,14 +336,25 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const sujetLabel = sujets[sujet] || sujet;
             
-            const whatsappMessage = `*Nouveau message depuis le site HAID*%0A%0A` +
-                                   `*Nom:* ${nom} ${prenom}%0A` +
-                                   `*Email:* ${email}%0A` +
-                                   `*Téléphone:* ${telephone || 'Non fourni'}%0A` +
-                                   `*Sujet:* ${sujetLabel}%0A` +
-                                   `*Message:*%0A${message}`;
+            const lines = enC ? [
+                '*New message from the HAID website*', '',
+                `*Name:* ${nom} ${prenom}`,
+                `*Email:* ${email}`,
+                `*Phone:* ${telephone || 'Not provided'}`,
+                `*Subject:* ${sujetLabel}`,
+                '*Message:*',
+                message
+            ] : [
+                '*Nouveau message depuis le site HAID*', '',
+                `*Nom:* ${nom} ${prenom}`,
+                `*Email:* ${email}`,
+                `*Téléphone:* ${telephone || 'Non fourni'}`,
+                `*Sujet:* ${sujetLabel}`,
+                '*Message:*',
+                message
+            ];
             
-            window.open(`https://wa.me/${phoneNumber}?text=${whatsappMessage}`, '_blank');
+            window.open(`https://wa.me/${phoneNumber}?text=` + encodeURIComponent(lines.join('\n')), '_blank');
             
             // Show success
             const formSuccess = document.getElementById('formSuccess');
@@ -349,7 +372,8 @@ document.addEventListener('DOMContentLoaded', function() {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             const email = this.querySelector('input[type="email"]').value;
-            const message = `Bonjour HAID, je souhaite m'inscrire à votre newsletter. Mon email : ${email}`;
+            const enN = document.documentElement.lang === 'en';
+            const message = enN ? `Hello HAID, I would like to subscribe to your newsletter. My email: ${email}` : `Bonjour HAID, je souhaite m'inscrire à votre newsletter. Mon email : ${email}`;
             const encodedMessage = encodeURIComponent(message);
             window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
         });
@@ -367,7 +391,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 const titreElem = projetCard?.querySelector('h3, h4');
                 if (titreElem) projetTitre = titreElem.textContent;
             }
-            const message = `Bonjour HAID, je souhaite avoir plus d'informations sur le projet : *${projetTitre}*.`;
+            const enP = document.documentElement.lang === 'en';
+            const message = enP ? `Hello HAID, I would like more information about the project: *${projetTitre}*.` : `Bonjour HAID, je souhaite avoir plus d'informations sur le projet : *${projetTitre}*.`;
             const encodedMessage = encodeURIComponent(message);
             window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
         });
@@ -512,16 +537,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // ===== LANGUAGE SWITCHER =====
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const lang = this.dataset.lang;
-            // Store preference
-            localStorage.setItem('haid-lang', lang);
-            // In a real implementation, this would switch the page language
-            console.log(`Language switched to: ${lang}`);
+    // ===== LANGUAGE SWITCHER (géré par js/i18n.js ; repli si absent) =====
+    if (!window.HAID_I18N) {
+        document.querySelectorAll('.lang-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                try { localStorage.setItem('haid-lang', btn.getAttribute('data-lang')); } catch (e) {}
+            });
         });
-    });
+    }
     
     // ===== SCROLL REVEAL (fallback for elements without AOS) =====
     const revealElements = document.querySelectorAll('.reveal');

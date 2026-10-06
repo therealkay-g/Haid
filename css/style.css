@@ -387,12 +387,22 @@ footer { background-color: var(--primary-bg); color: var(--text-primary); positi
 .page-header-projets { background-image: url('https://images.unsplash.com/photo-1508614589041-895b88991e3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); }
 .page-header-support { background-image: url('https://images.unsplash.com/photo-1512418490979-92798ccc13b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); }
 .page-header-contact { background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); }
+.page-header-legal { background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); }
 .page-header-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(14, 77, 62, 0.4) 100%); z-index: 1; }
 .page-header .container { position: relative; z-index: 2; }
 .page-header-content { max-width: 700px; margin: 0 auto; }
 .page-header-tag { display: inline-block; font-family: var(--font-accent); font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; color: var(--glitch-emeraude); margin-bottom: 1rem; padding: 0.3rem 1rem; background: rgba(45, 212, 191, 0.1); border-radius: var(--radius-full); border: 1px solid rgba(45, 212, 191, 0.2); }
 .page-header h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); margin-bottom: 1rem; }
 .page-header p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+
+/* ===== LEGAL PAGES ===== */
+.legal-content { padding: 5rem 0; background: var(--primary-bg); }
+.legal-content .container { max-width: 820px; }
+.legal-content h2 { font-size: 1.6rem; margin: 2.5rem 0 1rem; color: var(--accent-gold); }
+.legal-content h2:first-child { margin-top: 0; }
+.legal-content p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.2rem; }
+.legal-content a { color: var(--glitch-emeraude); }
+.legal-content .btn-primary { margin-top: 1.5rem; }
 
 /* ===== ABOUT STORY ===== */
 .about-story { padding: 8rem 0; background: var(--primary-bg); }
@@ -696,6 +706,7 @@ textarea + .form-icon { bottom: auto; top: 2.5rem; }
 .error-links ul { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
 .error-links a { color: var(--glitch-emeraude); display: inline-flex; align-items: center; gap: 0.5rem; transition: color var(--transition-medium); }
 .error-links a:hover { color: var(--accent-baiser); }
+.error-lang { display: flex; align-items: center; justify-content: center; gap: 0.3rem; margin-bottom: 2rem; }
 
 /* ===== WHATSAPP BUTTONS ===== */
 .btn-whatsapp { background-color: var(--whatsapp) !important; border-color: var(--whatsapp) !important; color: white !important; animation: pulse-whatsapp 2s infinite; }
