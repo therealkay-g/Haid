@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nous soutenir - HAID | Faire un don ou devenir partenaire</title>
+    <meta name="description" content="Soutenez HAID RDC : faites un don, devenez partenaire ou bénévole. Chaque contribution compte pour le développement durable en République Démocratique du Congo.">
+    <meta property="og:title" content="Nous soutenir - HAID RDC">
+    <meta property="og:description" content="Rejoignez-nous dans notre mission pour un développement durable en RDC.">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <img src="https://i.ibb.co/rGZscHdm/IMG-2911.jpg" alt="HAID" class="preloader-logo">
+            <div class="preloader-bar"><div class="preloader-progress"></div></div>
+        </div>
+    </div>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="index.html"><img src="https://i.ibb.co/rGZscHdm/IMG-2911.jpg" alt="Logo HAID" class="logo-haid"></a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
+                <li><a href="nos-actions.html">Nos actions</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="nous-soutenir.html" class="active">Nous soutenir</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="lang-switcher">
+                    <button class="lang-btn active" data-lang="fr">FR</button>
+                    <span class="lang-separator">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header page-header-support">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <div class="page-header-content" data-aos="fade-up">
+                <span class="page-header-tag">Soutenez-nous</span>
+                <h1>Nous <span class="accent text-gradient-gold">soutenir</span></h1>
+                <p>Rejoignez-nous dans notre mission pour un développement durable en République Démocratique du Congo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="soutenir-intro">
+        <div class="container">
+            <div class="intro-content" data-aos="fade-up">
+                <span class="section-tag">Votre Impact</span>
+                <h2>Chaque geste <span class="accent">compte</span></h2>
+                <p class="intro-text">Votre soutien est essentiel pour amplifier notre impact et toucher plus de communautés vulnérables. Découvrez les différentes façons de nous accompagner dans notre mission.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Options de soutien -->
+    <section class="support-options">
+        <div class="container">
+            <div class="support-grid">
+                <!-- Option 1: Don -->
+                <div class="support-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="support-card-header">
+                        <div class="support-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <span class="support-number">01</span>
+                    </div>
+                    <h3>Faire un don</h3>
+                    <p class="support-description">Votre don nous permet de financer nos projets sur le terrain et d'apporter une aide concrète aux communautés les plus vulnérables de la RDC.</p>
+                    <div class="support-details">
+                        <div class="don-options">
+                            <h4><i class="fas fa-gift"></i> Options de don</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Don ponctuel</li>
+                                <li><i class="fas fa-check"></i> Don mensuel</li>
+                                <li><i class="fas fa-check"></i> Don annuel</li>
+                                <li><i class="fas fa-check"></i> Don en nature (matériel)</li>
+                            </ul>
+                        </div>
+                        <div class="don-montants">
+                            <h4><i class="fas fa-coins"></i> Montants suggérés</h4>
+                            <div class="montant-buttons">
+                                <button class="montant-btn btn-donate" data-montant="25">25$</button>
+                                <button class="montant-btn btn-donate" data-montant="50">50$</button>
+                                <button class="montant-btn btn-donate" data-montant="100">100$</button>
+                                <button class="montant-btn btn-donate" data-montant="autre">Autre</button>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-primary btn-full btn-whatsapp magnetic" data-message="Bonjour HAID, je souhaite faire un don. Pouvez-vous me guider sur les modalités ?">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Faire un don maintenant</span>
+                        </a>
+                        <p class="info-note"><i class="fas fa-shield-alt"></i> Les dons sont sécurisés et une attestation fiscale vous sera envoyée.</p>
+                    </div>
+                </div>
+
+                <!-- Option 2: Partenariat -->
+                <div class="support-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="support-card-header">
+                        <div class="support-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <span class="support-number">02</span>
+                    </div>
+                    <h3>Devenir partenaire</h3>
+                    <p class="support-description">Entreprises, institutions, fondations : ensemble, construisons des projets durables à fort impact social et environnemental.</p>
+                    <div class="support-details">
+                        <h4><i class="fas fa-briefcase"></i> Nos besoins en partenariat</h4>
+                        <ul class="partenariat-list">
+                            <li><i class="fas fa-check"></i> Financement de projets</li>
+                            <li><i class="fas fa-check"></i> Équipements et matériel</li>
+                            <li><i class="fas fa-check"></i> Expertise technique</li>
+                            <li><i class="fas fa-check"></i> Mécénat de compétences</li>
+                            <li><i class="fas fa-check"></i> Visibilité et communication</li>
+                        </ul>
+                        <div class="partenariat-exemples">
+                            <h4><i class="fas fa-users"></i> Exemples de collaborations</h4>
+                            <div class="exemple-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>Entreprises du secteur énergétique</span>
+                            </div>
+                            <div class="exemple-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Universités et centres de recherche</span>
+                            </div>
+                            <div class="exemple-item">
+                                <i class="fas fa-globe"></i>
+                                <span>Institutions internationales</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-secondary btn-full btn-whatsapp magnetic" data-message="Bonjour HAID, je suis intéressé(e) par un partenariat. Pouvez-vous me contacter ?">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Devenir partenaire</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Option 3: Bénévolat -->
+                <div class="support-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="support-card-header">
+                        <div class="support-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <span class="support-number">03</span>
+                    </div>
+                    <h3>Devenir bénévole</h3>
+                    <p class="support-description">Donnez de votre temps et de vos compétences pour soutenir nos actions sur le terrain ou à distance. Chaque compétence a sa place.</p>
+                    <div class="support-details">
+                        <h4><i class="fas fa-tasks"></i> Domaines de bénévolat</h4>
+                        <ul class="benevolat-list">
+                            <li><i class="fas fa-check"></i> Communication et sensibilisation</li>
+                            <li><i class="fas fa-check"></i> Formation et éducation</li>
+                            <li><i class="fas fa-check"></i> Appui technique (solaire, drones)</li>
+                            <li><i class="fas fa-check"></i> Collecte de fonds</li>
+                            <li><i class="fas fa-check"></i> Traductions (français, anglais, swahili)</li>
+                        </ul>
+                        <div class="benevolat-info">
+                            <p><i class="fas fa-clock"></i> Engagement flexible (quelques heures à temps plein)</p>
+                            <p><i class="fas fa-laptop"></i> Possibilité de bénévolat à distance</p>
+                            <p><i class="fas fa-certificate"></i> Attestation de bénévolat fournie</p>
+                        </div>
+                        <a href="#" class="btn-secondary btn-full btn-whatsapp magnetic" data-message="Bonjour HAID, je souhaite devenir bénévole. Comment puis-je aider ?">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Devenir bénévole</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact de votre soutien -->
+    <section class="impact-support" id="impact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag light">Impact Concret</span>
+                <h2>L'impact de <span class="accent">votre soutien</span></h2>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-item" data-aos="fade-up" data-aos-delay="0">
+                    <div class="impact-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <div class="impact-amount">50<span>€</span></div>
+                    <p>Équipe une école en panneaux solaires pour l'éclairage et la recharge des appareils</p>
+                </div>
+                <div class="impact-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="impact-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <div class="impact-amount">100<span>€</span></div>
+                    <p>Finance la plantation de 200 arbres dans le cadre de nos programmes de reboisement</p>
+                </div>
+                <div class="impact-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="impact-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="impact-amount">500<span>€</span></div>
+                    <p>Forme 5 jeunes à la cartographie par drone et à l'analyse environnementale</p>
+                </div>
+                <div class="impact-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="impact-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="impact-amount">1 000<span>€</span></div>
+                    <p>Équipe un centre de santé complet en matériel solaire pour la conservation des vaccins</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transparence -->
+    <section class="transparence" id="transparence">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Transparence</span>
+                <h2>Notre engagement pour la <span class="accent">transparence</span></h2>
+            </div>
+            <div class="transparence-grid">
+                <div class="transparence-card" data-aos="fade-up" data-aos-delay="0">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <h4>Rapports financiers</h4>
+                    <p>Chaque don est tracé et nos rapports financiers annuels sont publiés et accessibles à tous.</p>
+                    <a href="#" class="btn-download">
+                        <span>Télécharger le rapport 2024</span>
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+                <div class="transparence-card" data-aos="fade-up" data-aos-delay="150">
+                    <i class="fas fa-chart-bar"></i>
+                    <h4>Rapports d'activité</h4>
+                    <p>Retrouvez le détail de nos actions, nos résultats et nos objectifs dans nos rapports d'activité.</p>
+                    <a href="#" class="btn-download">
+                        <span>Télécharger le rapport 2024</span>
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+                <div class="transparence-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-balance-scale"></i>
+                    <h4>Statuts & gouvernance</h4>
+                    <p>Consultez nos statuts, notre organigramme et les informations sur notre gouvernance.</p>
+                    <a href="#" class="btn-download">
+                        <span>Consulter les statuts</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages donateurs -->
+    <section class="temoignages" id="temoignages">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Témoignages</span>
+                <h2>Ils nous ont <span class="accent">soutenus</span></h2>
+            </div>
+            <div class="temoignages-grid">
+                <div class="temoignage-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="temoignage-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="temoignage-text">"Faire un don à HAID, c'est investir dans l'avenir de la RDC. Je reçois régulièrement des nouvelles des projets que je soutiens et je vois concrètement l'impact de ma contribution."</p>
+                    <div class="temoignage-author">
+                        <div class="temoignage-avatar"><i class="fas fa-user"></i></div>
+                        <div class="temoignage-info">
+                            <h4>Donateur régulier</h4>
+                            <span>France</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="temoignage-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="temoignage-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="temoignage-text">"Notre entreprise a financé l'équipement d'une école en panneaux solaires. Le retour sur investissement social est immense et l'image de notre marque s'en est trouvée renforcée."</p>
+                    <div class="temoignage-author">
+                        <div class="temoignage-avatar"><i class="fas fa-building"></i></div>
+                        <div class="temoignage-info">
+                            <h4>Partenaire entreprise</h4>
+                            <span>Belgique</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="temoignage-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="temoignage-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="temoignage-text">"En tant que bénévole à distance, j'ai pu contribuer à la communication de HAID depuis l'Europe. C'est une expérience enrichissante qui me connecte directement au terrain."</p>
+                    <div class="temoignage-author">
+                        <div class="temoignage-avatar"><i class="fas fa-user"></i></div>
+                        <div class="temoignage-info">
+                            <h4>Bénévole</h4>
+                            <span>Canada</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Prêt à faire la <span class="accent">différence</span> ?</h2>
+                <p>Rejoignez les milliers de personnes qui soutiennent chaque jour le développement durable en RDC.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-whatsapp" data-message="Bonjour HAID, je souhaite faire un don. Pouvez-vous me guider ?">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Faire un don</span>
+                    </a>
+                    <a href="contact.html" class="btn-secondary">
+                        <span>Nous contacter</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <img src="https://i.ibb.co/rGZscHdm/IMG-2911.jpg" alt="Logo HAID" class="footer-logo">
+                        <h4>HAID RDC</h4>
+                        <p>Agence Humanitaire pour le Développement Intégré</p>
+                        <p class="footer-slogan">Humanitaire & Développement Durable</p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link btn-whatsapp-social" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contact</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> 005, Avenue Dido, Q/Kinsuka Pêcheur, C/Ngaliema, Kinshasa, RDC</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+243823662018">+243 823 662 018</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:contact@ong-haid.com">contact@ong-haid.com</a></p>
+                        <p><i class="fab fa-whatsapp"></i> <a href="#" class="btn-whatsapp-social">+243 823 662 018</a></p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Liens rapides</h4>
+                        <ul>
+                            <li><a href="qui-sommes-nous.html"><i class="fas fa-chevron-right"></i> Qui sommes-nous</a></li>
+                            <li><a href="nos-actions.html"><i class="fas fa-chevron-right"></i> Nos actions</a></li>
+                            <li><a href="projets.html"><i class="fas fa-chevron-right"></i> Nos projets</a></li>
+                            <li><a href="nous-soutenir.html"><i class="fas fa-chevron-right"></i> Nous soutenir</a></li>
+                            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-newsletter">
+                        <h4>Newsletter</h4>
+                        <p>Recevez nos actualités et rapports d'activité.</p>
+                        <form class="footer-newsletter-form" id="footerNewsletterForm">
+                            <input type="email" placeholder="Votre email" required>
+                            <button type="submit" aria-label="S'inscrire"><i class="fas fa-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>&copy; <span id="currentYear"></span> HAID RDC - Tous droits réservés</p>
+                    <div class="footer-legal">
+                        <a href="#">Mentions légales</a>
+                        <span class="separator">|</span>
+                        <a href="#">Politique de confidentialité</a>
+                        <span class="separator">|</span>
+                        <a href="#">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

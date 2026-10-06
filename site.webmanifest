@@ -1,0 +1,4 @@
+{
+  "file": "site.webmanifest",
+  "content": "{\n    \"name\": \"HAID - Agence Humanitaire pour le Développement Intégré\",\n    \"short_name\": \"HAID RDC\",\n    \"description\": \"Agence Humanitaire pour le Développement Intégré en République Démocratique du Congo\",\n    \"start_url\": \"/index.html\",\n    \"display\": \"standalone\",\n    \"background_color\": \"#0B1A2B\",\n    \"theme_color\": \"#0B1A2B\",\n    \"orientation\": \"portrait-primary\",\n    \"icons\": [\n        {\n            \"src\": \"images/favicon-192x192.png\",\n            \"sizes\": \"192x192\",\n            \"type\": \"image/png\"\n        },\n        {\n            \"src\": \"images/favicon-512x512.png\",\n            \"sizes\": \"512x512\",\n            \"type\": \"image/png\"\n        }\n    ],\n    \"lang\": \"fr\",\n    \"categories\": [\"ngo\", \"charity\", \"non-profit\"]\n}"
+}

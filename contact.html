@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - HAID | Agence Humanitaire RDC</title>
+    <meta name="description" content="Contactez HAID RDC pour toute information, proposition de partenariat ou projet. WhatsApp, téléphone et email disponibles.">
+    <meta property="og:title" content="Contact - HAID RDC">
+    <meta property="og:description" content="Prenez contact avec notre équipe pour toute information ou projet.">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <img src="https://i.ibb.co/rGZscHdm/IMG-2911.jpg" alt="HAID" class="preloader-logo">
+            <div class="preloader-bar"><div class="preloader-progress"></div></div>
+        </div>
+    </div>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="index.html"><img src="https://i.ibb.co/rGZscHdm/IMG-2911.jpg" alt="Logo HAID" class="logo-haid"></a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
+                <li><a href="nos-actions.html">Nos actions</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="nous-soutenir.html">Nous soutenir</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li class="lang-switcher">
+                    <button class="lang-btn active" data-lang="fr">FR</button>
+                    <span class="lang-separator">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header page-header-contact">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <div class="page-header-content" data-aos="fade-up">
+                <span class="page-header-tag">Contact</span>
+                <h1>Nous <span class="accent text-gradient-emerald">contacter</span></h1>
+                <p>Prenez contact avec notre équipe pour toute information, projet ou proposition de partenariat</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Grid -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Formulaire de contact -->
+                <div class="contact-form-wrapper" data-aos="fade-right">
+                    <div class="form-header">
+                        <span class="section-tag">Formulaire</span>
+                        <h2>Envoyez-nous <span class="accent">un message</span></h2>
+                        <p>Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nom">Nom complet <span class="required">*</span></label>
+                                <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+                                <i class="fas fa-user form-icon"></i>
+                            </div>
+                            <div class="form-group">
+                                <label for="prenom">Prénom</label>
+                                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
+                                <i class="fas fa-user form-icon"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                                <i class="fas fa-envelope form-icon"></i>
+                            </div>
+                            <div class="form-group">
+                                <label for="telephone">Téléphone</label>
+                                <input type="tel" id="telephone" name="telephone" placeholder="+243 XXX XXX XXX">
+                                <i class="fas fa-phone form-icon"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="sujet">Sujet <span class="required">*</span></label>
+                            <select id="sujet" name="sujet" required>
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="information">Demande d'information</option>
+                                <option value="partenariat">Proposition de partenariat</option>
+                                <option value="don">Question sur un don</option>
+                                <option value="projet">Proposition de projet</option>
+                                <option value="benevolat">Devenir bénévole</option>
+                                <option value="presse">Demande presse / média</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                            <i class="fas fa-tag form-icon"></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Décrivez votre demande en détail..."></textarea>
+                            <i class="fas fa-comment form-icon"></i>
+                        </div>
+                        
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="rgpd" name="rgpd" required>
+                            <label for="rgpd">J'accepte que mes données soient traitées pour me répondre conformément à la <a href="#">politique de confidentialité</a> <span class="required">*</span></label>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary btn-whatsapp btn-full magnetic">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Envoyer via WhatsApp</span>
+                            </button>
+                        </div>
+                        
+                        <div class="form-success" id="formSuccess">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Votre message a été envoyé avec succès !</p>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Informations de contact -->
+                <div class="contact-info-wrapper" data-aos="fade-left">
+                    <div class="info-header">
+                        <span class="section-tag light">Coordonnées</span>
+                        <h2>Nos <span class="accent">coordonnées</span></h2>
+                        <p>Plusieurs moyens pour nous joindre, choisissez celui qui vous convient le mieux.</p>
+                    </div>
+                    
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Siège social</h3>
+                                <p>005, Avenue Dido<br>
+                                Quartier Kinsuka Pêcheur<br>
+                                Commune de Ngaliema<br>
+                                Kinshasa, République Démocratique du Congo</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Téléphone</h3>
+                                <p><a href="tel:+243823662018">+243 823 662 018</a></p>
+                                <p class="info-note"><i class="fas fa-clock"></i> Lun-Ven: 8h00 - 18h00 (GMT+1)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Email</h3>
+                                <p><a href="mailto:contact@ong-haid.com">contact@ong-haid.com</a></p>
+                                <p><a href="mailto:ong_haid@gmail.com">ong_haid@gmail.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card info-card-whatsapp">
+                            <div class="info-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>WhatsApp</h3>
+                                <p><a href="#" class="btn-whatsapp-link" data-message="Bonjour HAID, j'ai une question.">+243 823 662 018</a></p>
+                                <p class="info-note"><i class="fas fa-check-circle"></i> Disponible 7j/7</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-actions">
+                        <h3><i class="fas fa-bolt"></i> Contact rapide</h3>
+                        <div class="contact-actions-buttons">
+                            <a href="#" class="btn-primary btn-whatsapp magnetic" data-message="Bonjour HAID, j'ai une question.">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a href="tel:+243823662018" class="btn-secondary btn-call magnetic">
+                                <i class="fas fa-phone"></i>
+                                <span>Appeler</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <h3><i class="fas fa-share-alt"></i> Suivez-nous</h3>
+                        <div class="contact-social-links">
+                            <a href="#" class="social-link btn-whatsapp-social" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">FAQ</span>
+                <h2>Questions <span class="accent">fréquentes</span></h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+                    <h4>Comment puis-je faire un don à HAID ?</h4>
+                    <p>Vous pouvez faire un don via WhatsApp en cliquant sur le bouton correspondant, ou nous contacter par email pour les dons importants. Nous acceptons les virements bancaires, les dons en nature et les transferts via mobile money.</p>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <h4>Comment devenir bénévole ?</h4>
+                    <p>Remplissez le formulaire de contact en sélectionnant "Devenir bénévole" comme sujet. Nous vous contacterons pour discuter de vos compétences et de la façon dont vous pouvez contribuer, sur place ou à distance.</p>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <h4>Proposez-vous des partenariats aux entreprises ?</h4>
+                    <p>Oui, nous collaborons activement avec des entreprises pour des projets de mécénat, de mécénat de compétences et de responsabilité sociale. Contactez-nous pour discuter d'un partenariat sur mesure.</p>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <h4>Puis-je visiter vos projets sur le terrain ?</h4>
+                    <p>Oui, nous organisons des visites de terrain pour nos partenaires et donateurs. Contactez-nous au moins 3 semaines à l'avance pour organiser votre visite en toute sécurité.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <img src="https://i.ibb.co/rGZscHdm/IMG-2911.jpg" alt="Logo HAID" class="footer-logo">
+                        <h4>HAID RDC</h4>
+                        <p>Agence Humanitaire pour le Développement Intégré</p>
+                        <p class="footer-slogan">Humanitaire & Développement Durable</p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link btn-whatsapp-social" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contact</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> 005, Avenue Dido, Q/Kinsuka Pêcheur, C/Ngaliema, Kinshasa, RDC</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+243823662018">+243 823 662 018</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:contact@ong-haid.com">contact@ong-haid.com</a></p>
+                        <p><i class="fab fa-whatsapp"></i> <a href="#" class="btn-whatsapp-social">+243 823 662 018</a></p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Liens rapides</h4>
+                        <ul>
+                            <li><a href="qui-sommes-nous.html"><i class="fas fa-chevron-right"></i> Qui sommes-nous</a></li>
+                            <li><a href="nos-actions.html"><i class="fas fa-chevron-right"></i> Nos actions</a></li>
+                            <li><a href="projets.html"><i class="fas fa-chevron-right"></i> Nos projets</a></li>
+                            <li><a href="nous-soutenir.html"><i class="fas fa-chevron-right"></i> Nous soutenir</a></li>
+                            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-newsletter">
+                        <h4>Newsletter</h4>
+                        <p>Recevez nos actualités et rapports d'activité.</p>
+                        <form class="footer-newsletter-form" id="footerNewsletterForm">
+                            <input type="email" placeholder="Votre email" required>
+                            <button type="submit" aria-label="S'inscrire"><i class="fas fa-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>&copy; <span id="currentYear"></span> HAID RDC - Tous droits réservés</p>
+                    <div class="footer-legal">
+                        <a href="#">Mentions légales</a>
+                        <span class="separator">|</span>
+                        <a href="#">Politique de confidentialité</a>
+                        <span class="separator">|</span>
+                        <a href="#">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

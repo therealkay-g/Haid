@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos projets - HAID | Réalisations sur le terrain en RDC</title>
+    <meta name="description" content="Découvrez les projets réalisés par HAID en RDC : électrification solaire, cartographie par drones, études environnementales et reboisement dans 6 provinces.">
+    <meta property="og:title" content="Nos projets - HAID RDC">
+    <meta property="og:description" content="Découvrez nos réalisations sur le terrain à travers la RDC.">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <img src="https://i.ibb.co/rGZscHdm/IMG-2911.jpg" alt="HAID" class="preloader-logo">
+            <div class="preloader-bar"><div class="preloader-progress"></div></div>
+        </div>
+    </div>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="index.html"><img src="https://i.ibb.co/rGZscHdm/IMG-2911.jpg" alt="Logo HAID" class="logo-haid"></a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
+                <li><a href="nos-actions.html">Nos actions</a></li>
+                <li><a href="projets.html" class="active">Projets</a></li>
+                <li><a href="nous-soutenir.html">Nous soutenir</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="lang-switcher">
+                    <button class="lang-btn active" data-lang="fr">FR</button>
+                    <span class="lang-separator">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header page-header-projets">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <div class="page-header-content" data-aos="fade-up">
+                <span class="page-header-tag">Nos Réalisations</span>
+                <h1>Nos <span class="accent text-gradient-gold">projets</span></h1>
+                <p>Découvrez nos réalisations sur le terrain à travers la République Démocratique du Congo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtres Projets -->
+    <section class="projets-filters">
+        <div class="container">
+            <div class="filter-buttons" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th-large"></i>
+                    <span>Tous les projets</span>
+                </button>
+                <button class="filter-btn" data-filter="solaire">
+                    <i class="fas fa-solar-panel"></i>
+                    <span>Énergie solaire</span>
+                </button>
+                <button class="filter-btn" data-filter="drones">
+                    <i class="fas fa-plane"></i>
+                    <span>Drones & cartographie</span>
+                </button>
+                <button class="filter-btn" data-filter="etudes">
+                    <i class="fas fa-leaf"></i>
+                    <span>Études environnementales</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grille des Projets -->
+    <section class="projets-grid-section">
+        <div class="container">
+            <div class="projets-grid-full">
+                <!-- Projet 1 - Solaire -->
+                <div class="projet-card" data-category="solaire" data-aos="fade-up" data-aos-delay="0">
+                    <div class="projet-card-image">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Électrification solaire Bas-Uélé" loading="lazy">
+                        <div class="projet-card-category">
+                            <i class="fas fa-solar-panel"></i>
+                            <span>Énergie solaire</span>
+                        </div>
+                        <div class="projet-card-year">2024</div>
+                    </div>
+                    <div class="projet-card-content">
+                        <h3>Électrification scolaire - Bas-Uélé</h3>
+                        <p class="projet-location"><i class="fas fa-map-marker-alt"></i> Province du Bas-Uélé</p>
+                        <div class="projet-stats-row">
+                            <div class="p-stat"><strong>12</strong><span>Écoles</span></div>
+                            <div class="p-stat"><strong>3kW</strong><span>Puissance</span></div>
+                            <div class="p-stat"><strong>3k+</strong><span>Élèves</span></div>
+                        </div>
+                        <p class="projet-description">Une transformation majeure pour l'éducation rurale, permettant aux élèves d'étudier après le coucher du soleil.</p>
+                        <a href="#" class="btn-projet btn-whatsapp magnetic" data-message="Bonjour HAID, je souhaite avoir plus d'informations sur le projet Électrification scolaire - Bas-Uélé.">
+                            <span>Voir l'étude de cas</span>
+                            <i class="fas fa-file-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Projet 2 - Drones -->
+                <div class="projet-card" data-category="drones" data-aos="fade-up" data-aos-delay="100">
+                    <div class="projet-card-image">
+                        <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Cartographie environnementale Sud-Kivu" loading="lazy">
+                        <div class="projet-card-category">
+                            <i class="fas fa-plane"></i>
+                            <span>Drones & cartographie</span>
+                        </div>
+                        <div class="projet-card-year">2024</div>
+                    </div>
+                    <div class="projet-card-content">
+                        <h3>Cartographie de la réserve de Yangambi</h3>
+                        <p class="projet-location"><i class="fas fa-map-marker-alt"></i> Province de la Tshopo</p>
+                        <div class="projet-stats-row">
+                            <div class="p-stat"><strong>500</strong><span>km²</span></div>
+                            <div class="p-stat"><strong>4K</strong><span>Data</span></div>
+                            <div class="p-stat"><strong>98%</strong><span>Précision</span></div>
+                        </div>
+                        <p class="projet-description">Utilisation de la photogrammétrie haute résolution pour la surveillance de la biodiversité.</p>
+                        <a href="#" class="btn-projet btn-whatsapp magnetic" data-message="Bonjour HAID, je souhaite avoir plus d'informations sur le projet Cartographie de la réserve de Yangambi.">
+                            <span>Voir l'étude de cas</span>
+                            <i class="fas fa-file-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Projet 3 - Études -->
+                <div class="projet-card" data-category="etudes" data-aos="fade-up" data-aos-delay="200">
+                    <div class="projet-card-image">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Étude environnementale agroforestière" loading="lazy">
+                        <div class="projet-card-category">
+                            <i class="fas fa-leaf"></i>
+                            <span>Études environnementales</span>
+                        </div>
+                        <div class="projet-card-year">2023</div>
+                    </div>
+                    <div class="projet-card-content">
+                        <h3>EIES - Projet agroforestier</h3>
+                        <p class="projet-location"><i class="fas fa-map-marker-alt"></i> Province du Kongo Central</p>
+                        <p class="projet-description">Étude d'impact environnemental et social pour un projet de reboisement de 1 000 hectares, conforme aux normes internationales de la Banque Mondiale.</p>
+                        <div class="projet-meta">
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-file-alt"></i> EIES validée</span>
+                            <span><i class="fas fa-expand"></i> 1 000 ha</span>
+                        </div>
+                        <a href="#" class="btn-projet btn-whatsapp" data-message="Bonjour HAID, je souhaite avoir plus d'informations sur le projet EIES - Projet agroforestier.">
+                            <span>En savoir plus</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Projet 4 - Solaire -->
+                <div class="projet-card" data-category="solaire" data-aos="fade-up" data-aos-delay="0">
+                    <div class="projet-card-image">
+                        <img src="https://images.unsplash.com/photo-1542385311-379e4928b584?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Maintenance infrastructures Nord-Ubangi" loading="lazy">
+                        <div class="projet-card-category">
+                            <i class="fas fa-solar-panel"></i>
+                            <span>Énergie solaire</span>
+                        </div>
+                        <div class="projet-card-year">2023</div>
+                    </div>
+                    <div class="projet-card-content">
+                        <h3>Centres de santé solaires - Kwango</h3>
+                        <p class="projet-location"><i class="fas fa-map-marker-alt"></i> Province du Kwango</p>
+                        <p class="projet-description">Équipement de 5 centres de santé en panneaux solaires pour la conservation des vaccins, l'éclairage des salles d'opération et le fonctionnement des équipements médicaux.</p>
+                        <div class="projet-meta">
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-hospital"></i> 5 centres</span>
+                            <span><i class="fas fa-syringe"></i> Vaccins conservés</span>
+                        </div>
+                        <a href="#" class="btn-projet btn-whatsapp" data-message="Bonjour HAID, je souhaite avoir plus d'informations sur le projet Centres de santé solaires - Kwango.">
+                            <span>En savoir plus</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Projet 5 - Drones -->
+                <div class="projet-card" data-category="drones" data-aos="fade-up" data-aos-delay="100">
+                    <div class="projet-card-image">
+                        <img src="https://images.unsplash.com/photo-1508962914676-134849a727f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Formation technologique Goma" loading="lazy">
+                        <div class="projet-card-category">
+                            <i class="fas fa-plane"></i>
+                            <span>Drones & cartographie</span>
+                        </div>
+                        <div class="projet-card-year">2024</div>
+                    </div>
+                    <div class="projet-card-content">
+                        <h3>Formation de jeunes - Goma</h3>
+                        <p class="projet-location"><i class="fas fa-map-marker-alt"></i> Goma, Nord-Kivu</p>
+                        <p class="projet-description">Programme de formation de 25 jeunes à l'utilisation des drones pour la cartographie environnementale, l'agriculture de précision et la gestion des catastrophes naturelles.</p>
+                        <div class="projet-meta">
+                            <span><i class="fas fa-calendar"></i> 2024</span>
+                            <span><i class="fas fa-graduation-cap"></i> 25 formés</span>
+                            <span><i class="fas fa-clock"></i> 6 mois</span>
+                        </div>
+                        <a href="#" class="btn-projet btn-whatsapp" data-message="Bonjour HAID, je souhaite avoir plus d'informations sur le projet Formation de jeunes - Goma.">
+                            <span>En savoir plus</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Projet 6 - Études -->
+                <div class="projet-card" data-category="etudes" data-aos="fade-up" data-aos-delay="200">
+                    <div class="projet-card-image">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Reboisement urbain Kinshasa" loading="lazy">
+                        <div class="projet-card-category">
+                            <i class="fas fa-leaf"></i>
+                            <span>Études environnementales</span>
+                        </div>
+                        <div class="projet-card-year">2023</div>
+                    </div>
+                    <div class="projet-card-content">
+                        <h3>Évaluation biodiversité - Lac Tumba</h3>
+                        <p class="projet-location"><i class="fas fa-map-marker-alt"></i> Province de l'Équateur</p>
+                        <p class="projet-description">Inventaire complet de la biodiversité et évaluation des menaces dans la région du Lac Tumba, site Ramsar d'importance internationale pour la conservation des oiseaux d'eau.</p>
+                        <div class="projet-meta">
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-dove"></i> +200 espèces</span>
+                            <span><i class="fas fa-water"></i> Site Ramsar</span>
+                        </div>
+                        <a href="#" class="btn-projet btn-whatsapp" data-message="Bonjour HAID, je souhaite avoir plus d'informations sur le projet Évaluation biodiversité - Lac Tumba.">
+                            <span>En savoir plus</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carte des interventions -->
+    <section class="carte-interventions" id="carte">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Géographie</span>
+                <h2>Nos zones <span class="accent">d'intervention</span></h2>
+            </div>
+            <div class="carte-container" data-aos="fade-up" data-aos-delay="200">
+                <div id="map" class="map-wrapper"></div>
+                <div class="carte-legend">
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #D4AF37;"></span>
+                        <span>Énergie solaire</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #2DD4BF;"></span>
+                        <span>Drones & cartographie</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot" style="background: #4CAF50;"></span>
+                        <span>Études environnementales</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Vous avez un <span class="accent">projet</span> à nous proposer ?</h2>
+                <p>Nous sommes ouverts aux collaborations et aux nouveaux défis pour le développement durable de la RDC.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary magnetic">
+                        <span>Proposer un projet</span>
+                        <i class="fas fa-lightbulb"></i>
+                    </a>
+                    <a href="nous-soutenir.html" class="btn-secondary magnetic">
+                        <span>Nous soutenir</span>
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <img src="https://i.ibb.co/rGZscHdm/IMG-2911.jpg" alt="Logo HAID" class="footer-logo">
+                        <h4>HAID RDC</h4>
+                        <p>Agence Humanitaire pour le Développement Intégré</p>
+                        <p class="footer-slogan">Humanitaire & Développement Durable</p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link btn-whatsapp-social" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contact</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> 005, Avenue Dido, Q/Kinsuka Pêcheur, C/Ngaliema, Kinshasa, RDC</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+243823662018">+243 823 662 018</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:contact@ong-haid.com">contact@ong-haid.com</a></p>
+                        <p><i class="fab fa-whatsapp"></i> <a href="#" class="btn-whatsapp-social">+243 823 662 018</a></p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Liens rapides</h4>
+                        <ul>
+                            <li><a href="qui-sommes-nous.html"><i class="fas fa-chevron-right"></i> Qui sommes-nous</a></li>
+                            <li><a href="nos-actions.html"><i class="fas fa-chevron-right"></i> Nos actions</a></li>
+                            <li><a href="projets.html"><i class="fas fa-chevron-right"></i> Nos projets</a></li>
+                            <li><a href="nous-soutenir.html"><i class="fas fa-chevron-right"></i> Nous soutenir</a></li>
+                            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-newsletter">
+                        <h4>Newsletter</h4>
+                        <p>Recevez nos actualités et rapports d'activité.</p>
+                        <form class="footer-newsletter-form" id="footerNewsletterForm">
+                            <input type="email" placeholder="Votre email" required>
+                            <button type="submit" aria-label="S'inscrire"><i class="fas fa-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>&copy; <span id="currentYear"></span> HAID RDC - Tous droits réservés</p>
+                    <div class="footer-legal">
+                        <a href="#">Mentions légales</a>
+                        <span class="separator">|</span>
+                        <a href="#">Politique de confidentialité</a>
+                        <span class="separator">|</span>
+                        <a href="#">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
